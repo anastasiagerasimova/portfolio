@@ -1,0 +1,158 @@
+.portfolio {
+    padding-top: 121px;
+    padding-bottom: 128px;
+    background-color: #f4f8f9;
+}
+
+.portfolio--large{
+    padding-top: 60px;
+    padding-bottom: 94px;
+}
+
+.portfolio__heading{
+    margin-bottom: 66px;
+}
+
+.portfolio__heading--center{
+    text-align: center;
+}
+
+.portfolio-filter {
+    margin-bottom: 49px;
+}
+
+.portfolio-filter__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-filter__element {
+
+    &:not(:last-child){
+        margin-right: 82px; 
+    }
+}
+
+.portfolio-filter__button {
+    color: #8fa5ae;
+    font-family: "Mplus 1p";
+    font-size: 28px;
+    font-weight: 800;
+    cursor: pointer;
+
+    &:hover, &:active{
+        color: #ed574f;
+    }
+}
+
+.portfolio-filter__button--active{
+    color: #000;
+}
+
+.portfolio__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+    margin-bottom: 60px;
+
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+}
+
+.mix{
+    display: none;
+}
+
+.portfolio-item__image {
+    position: relative;
+    width: 556px;
+    height: 370px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 23px;
+}
+
+.portfolio-item__image--small {
+    position: relative;
+    width: 360px;
+    height: 239px;
+}
+
+.portfolio-item__image-hover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	width: 100%;
+    height: 100%;
+   
+	background-color:rgba(251, 222, 76, 0.85);
+    transition: opacity 0.5s ease-in ;
+    
+    &:hover, &:active{
+        opacity: 1;
+    }
+
+    span{
+        padding: 12px 24px;
+        border-radius: 26px;
+        border: 3px solid #ffffff;
+        background-color: #ffffff;
+
+        font-family: "Mplus 1p";
+        color: #ea736d;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 800;
+        outline: none;
+
+        transition: all 0.5s ease-in;
+
+        &:hover{
+            border: 3px solid #ea736d;
+            background-color: #ea736d;
+            color: #fff;
+        }
+
+        &:active{
+            border: 3px solid #d4423b;
+            background-color:  #d4423b;
+            color: #fff;
+        }
+    }
+}
+
+.portfolio-item__image img{
+
+}
+
+.portfolio-item__title {
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.portfolio-item__title--small{
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.portfolio-item__desc {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 30
+}
+
+.portfolio-card__desc--small{
+    font-size: 20px;
+}

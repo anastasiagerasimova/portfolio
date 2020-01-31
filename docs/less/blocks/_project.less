@@ -1,0 +1,251 @@
+.project{
+    padding-top: 76px;
+}
+
+.project__heaging {
+    margin-bottom: 46px;
+    text-align: center;   
+}
+
+.project__heaging span{
+    position: relative;
+    display: inline-block;
+
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 800;
+
+    z-index: 2;
+
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        left: -5px;
+        right: -5px;
+        height: 12px;
+        background-color: #fbdc4d;
+        z-index: -1;
+    }
+}
+
+.bedge-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 86px;
+}
+
+.bedge {
+	padding: 8px 11px;
+	color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.17;
+}
+
+.bedge:not(:last-child){
+	margin-right: 10px;
+}
+
+.bedge-html {
+	background-color:#ff861a;  
+}
+
+.bedge-css {
+	background-color:  #039be5;
+}
+
+.bedge-bootstrap {
+	background-color: #a062c7;
+}
+
+.bedge-js {
+	background-color: #ffd200;;
+}
+
+.bedge-jquery {
+	background-color: #044d85;;
+}
+
+.bedge-php {
+	background-color: #777bb4;;
+}
+
+.project__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 118px;
+}
+
+.project__desc {
+    height: auto;
+    width: 40.5%;
+    padding-top: 10px;
+}
+
+.project__img-wrapper {
+    height: auto;
+    width: 54.82%;
+    background-color: #039be5;
+
+    img{
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 20px 20px 100px #c4dbe9;
+    }
+}
+
+.project__more-info {
+    margin-bottom: 55px;
+}
+
+.more-info {
+}
+
+.more-info__title {
+    margin-bottom: 23px;
+}
+
+.more-info__list {
+    padding-left: 40px;
+}
+
+.more-info__item {
+    position: relative;
+    margin-bottom: 15px;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+
+    a{
+        color: #2a86b3;
+        font-family: "Mplus 1p";
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: underline;
+        transition: color 0.3s ease-in;
+
+        &:hover, &:active{
+            color: #ed574f;
+        }
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -39px;
+        width: 28px;
+        height: 28px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+}
+
+.more-info__item-demo::before{
+    background-image: url("../img/project/browser.svg");
+}
+
+.more-info__item-github::before{
+    background-image: url("../img/project/github.svg");
+}
+
+.project__about {
+    margin-bottom: 57px;
+}
+
+.about__title {
+    margin-bottom: 18px;
+}
+
+.about__text {
+    color: #161616;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.19px;
+}
+
+.project__details {
+}
+
+.details__title {
+    margin-bottom: 22px;
+}
+
+.details-list {
+    width: 100%;
+}
+
+.details-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 23px;
+
+    color: #161616;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.19px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.details-list__def {
+    width: 36%;
+    font-weight: 700;
+}
+
+.details-list__desc {
+    width: 64%;
+    font-weight: 400;
+
+    a{
+        color: #039be5;
+        font-family: "Mplus 1p";
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: underline;
+    }
+}
+
+.row-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pagination-btn {
+	width: calc(~"50% - 15px");
+	height: 80px;
+	background-color: #333333;
+    color: #feffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 80px;
+    letter-spacing: 0.26px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+
+    &:hover{
+        background-color: #656565;
+    }
+
+    &:active{
+        background-color: #141414;
+    }
+}
