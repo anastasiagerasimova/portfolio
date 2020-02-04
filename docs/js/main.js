@@ -14,8 +14,8 @@ $(document).ready(function() {
     });
 
     // MixItUp - фильтрация работ в портфолио
-    $('#portfolio-projects').mixItUp();
-    
+	$('#portfolio-projects').mixItUp();
+	
      //-fake-placeholder
     var formRows = document.querySelectorAll('.form-row');
     var formRowsInputs = document.querySelectorAll('.form-row__input')
@@ -37,7 +37,18 @@ $(document).ready(function() {
                 thisParent.querySelector('span').classList.remove('active');
             }
         })
-    }
+	}
+	
+	// Add active class to the current button (highlight it)
+	var filterList = document.getElementById(".portfolio-filter__list");
+	var filterButton = btnContainer.getElementsByClassName("portfolio-filter__button");
+	for (var i = 0; i < filterButton.length; i++) {
+	filterButton[i].addEventListener("click", function(){
+		var current = document.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		this.className += " active";
+	});
+	}
 
     //form-validate
 	$('#form').validate({
