@@ -992,6 +992,7 @@ button {
 }
 .portfolio-item {
   margin-bottom: 45px;
+  padding: 0 10px;
 }
 .portfolio-item:nth-last-child(-n + 1) {
   margin-bottom: 0;
@@ -999,6 +1000,7 @@ button {
 @media (min-width: 768px) {
   .portfolio-item {
     margin-bottom: 43px;
+    padding: 0;
   }
   .portfolio-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
