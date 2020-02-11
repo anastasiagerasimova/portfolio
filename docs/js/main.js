@@ -1,22 +1,23 @@
 $(document).ready(function() {
 
     //NAV_PAGE
-    $('#page-nav').onePageNav({
-        currentClass: 'active',
-        changeHash: 750,
-        scrollThreshold: 0.5,
-        filter: '',
-        easing: 'swing',
-        begin: function () {},
-        end: function () {},
-        scrollChange: function ($currentListItem) {}
+	$('#page-nav').onePageNav({
+		currentClass: 'active',
+		changeHash: false,
+		scrollSpeed: 750,
+		scrollThreshold: 0.5,
+		filter: '',
+		easing: 'swing',
+		begin: function() {},
+		end: function() {},
+		scrollChange: function($currentListItem) {}
+	});
 
-    });
 
     // MixItUp - фильтрация работ в портфолио
 	$('#portfolio-projects').mixItUp();
 	
-     //-fake-placeholder
+    // fake-placeholder
     var formRows = document.querySelectorAll('.form-row');
     var formRowsInputs = document.querySelectorAll('.form-row__input')
     
@@ -39,18 +40,8 @@ $(document).ready(function() {
         })
 	}
 	
-	// Add active class to the current button (highlight it)
-	var filterList = document.getElementById(".portfolio-filter__list");
-	var filterButton = btnContainer.getElementsByClassName("portfolio-filter__button");
-	for (var i = 0; i < filterButton.length; i++) {
-	filterButton[i].addEventListener("click", function(){
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace(" active", "");
-		this.className += " active";
-	});
-	}
 
-    //form-validate
+    // form-validate
 	$('#form').validate({
 		rules: {
 			email: {
@@ -84,7 +75,7 @@ $(document).ready(function() {
 
 	// Функция AJAX запрса на сервер
 	function ajaxFormSubmit() {
-		var string = $("#contact-form").serialize(); // Соханяем данные введенные в форму в строку. 
+		var string = $("#form").serialize(); // Соханяем данные введенные в форму в строку. 
 
 		// Формируем ajax запрос
 		$.ajax({
@@ -94,7 +85,7 @@ $(document).ready(function() {
 
 			// Функция если все прошло успешно
 			success: function (html) {
-				$("#contact-form").slideUp(800);
+				$("#form").slideUp(800);
 				$('#answer').html(html);
 			}
 		});
@@ -103,6 +94,18 @@ $(document).ready(function() {
 		return false;
 	}
 
+	// Back top button
+	$("#backTop").hide();
+
+	$(window).scroll( function () {
+
+		if($(this).scrollTop() > 200){
+			$("#backTop").fadeIn();
+		}
+		else{
+			$("#backTop").fadeOut();
+		}
+	})
 
 
 });

@@ -7,14 +7,16 @@
     @media (min-width: 768px){
         padding-top: 78px;
         padding-bottom: 90px;
-        background-color: #f4f8f9;
     }
 
     @media (min-width: 1200px){
         position: relative;
         padding-top: 138px;
         padding-bottom: 150px;
-        background-color: #f4f8f9;
+        background-image: url("../img/bg/line-3.jpg");
+        background-repeat: repeat;
+        background-position: center;
+        background-size: auto;
     
         &:before{
         content: "";
@@ -60,7 +62,7 @@
     z-index: 2;
 
     @media (min-width: 768px){
-        width: 43.86%;
+        width: calc(~"50% - 16px");
         margin-bottom: 0;
     }
 
@@ -146,7 +148,7 @@
     a{
         text-shadow: 0 3px 42px #ffffff;
         color: #96969d;
-        font-family: 'MPLUS 1p', sans-serif;
+        font-family: 'M PLUS 1p', sans-serif;
         transition: color .2s ease-in;
 
         &:hover{
@@ -168,7 +170,7 @@
     width: 100%;
 
     @media (min-width: 768px){
-        width: 46.585%;
+        width: calc(~"50% - 16px");
     }
 
     @media (min-width: 1200px){
@@ -178,11 +180,13 @@
 }
 
 .form{
+    max-width: 511px;
     padding: 60px 15px 40px;
     box-shadow: 0 28px 40px #c2dbeb;
     background-color: #ffffff;
 
     @media (min-width: 768px){
+        max-width: initial;
         padding: 60px 25px 40px;
         box-shadow: 0 28px 80px #c2dbeb; 
     }
@@ -230,7 +234,7 @@
     border-bottom: 2px solid #eaeaea;
 
     color:#000;
-    font-family: 'MPLUS 1p', sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
     font-size: 20px;
     font-weight: 700;
 
@@ -277,7 +281,7 @@
     border-bottom: 2px solid #eaeaea;
 
     color: #000;
-    font-family: 'MPLUS 1p', sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
     font-size: 20px;
     font-weight: 700;
 
@@ -305,6 +309,8 @@
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in;
+
+    -webkit-appearance: none;
 
     &:hover{
         background-color: #ffd300;
